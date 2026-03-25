@@ -1,0 +1,302 @@
+/* MammalList — Modern Editorial */
+
+:root {
+  --text: #333333;
+  --text-muted: #555;
+  --bg: #ffffff;
+  --rule: #e8e8e8;
+  --black: #111111;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 18px;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  font-weight: 400;
+  line-height: 1.65;
+  color: var(--text);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Playfair Display", Georgia, serif;
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--black);
+}
+
+a {
+  color: var(--text);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+  transition: opacity 0.15s ease;
+}
+
+a:hover {
+  opacity: 0.7;
+}
+
+.site-header {
+  padding: 1.75rem 1.5rem 2rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+.header-inner {
+  max-width: 72rem;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.brand-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+  color: inherit;
+}
+
+.brand-link:hover {
+  opacity: 0.85;
+}
+
+.brand-icon {
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+}
+
+.brand-logo {
+  height: 36px;
+  width: auto;
+  object-fit: contain;
+}
+
+.nav-main {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem 1.75rem;
+  font-size: 0.9rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.nav-main a {
+  text-decoration: none;
+  color: var(--text-muted);
+}
+
+.nav-main a:hover {
+  color: var(--text);
+  opacity: 1;
+}
+
+main {
+  flex: 1;
+  width: 100%;
+}
+
+.hero {
+  text-align: center;
+  padding: 4rem 1.5rem 3.5rem;
+  max-width: 42rem;
+  margin: 0 auto;
+}
+
+.hero h1 {
+  font-size: clamp(2.75rem, 8vw, 4rem);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  margin: 0 0 0.5rem;
+}
+
+.hero-tagline {
+  font-size: 1rem;
+  color: var(--text-muted);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.section-about {
+  max-width: 38rem;
+  margin: 0 auto;
+  padding: 0 1.5rem 4rem;
+}
+
+.section-about h2 {
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--text-muted);
+  margin: 0 0 1.25rem;
+  font-family: "Inter", sans-serif;
+}
+
+.about-lead {
+  margin: 0;
+  font-size: 1.05rem;
+}
+
+.about-lead::first-letter {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 3.75rem;
+  font-weight: 600;
+  float: left;
+  line-height: 0.82;
+  margin: 0.08em 0.12em 0 0;
+  color: var(--black);
+}
+
+.cta-wrap {
+  text-align: center;
+  padding: 0 1.5rem 5rem;
+}
+
+.btn-app-store {
+  display: inline-block;
+  padding: 1rem 1.75rem;
+  background: var(--black);
+  color: #fff !important;
+  font-size: 0.95rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  border-radius: 2px;
+  transition: background 0.2s ease, transform 0.15s ease;
+}
+
+.btn-app-store:hover {
+  opacity: 1;
+  background: #000;
+  transform: translateY(-1px);
+}
+
+.legal-page,
+.contact-page {
+  max-width: 40rem;
+  margin: 0 auto;
+  padding: 3rem 1.5rem 5rem;
+}
+
+.legal-page h1,
+.contact-page h1 {
+  font-size: clamp(2rem, 5vw, 2.75rem);
+  margin: 0 0 2.5rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+.legal-doc {
+  margin-bottom: 3.5rem;
+}
+
+.legal-doc:last-of-type {
+  margin-bottom: 0;
+}
+
+.legal-doc h2 {
+  font-size: 1.35rem;
+  margin: 2rem 0 0.75rem;
+}
+
+.legal-doc h2:first-child {
+  margin-top: 0;
+}
+
+.legal-doc h3 {
+  font-size: 1rem;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin: 1.75rem 0 0.5rem;
+  color: var(--text);
+}
+
+.legal-doc p {
+  margin: 0 0 1rem;
+}
+
+.contact-page p {
+  margin: 0 0 1.25rem;
+}
+
+.contact-email {
+  font-size: 1.1rem;
+}
+
+.site-footer {
+  margin-top: auto;
+  padding: 2rem 1.5rem;
+  border-top: 1px solid var(--rule);
+  background: #fafafa;
+}
+
+.footer-inner {
+  max-width: 72rem;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.footer-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem 2rem;
+  font-size: 0.875rem;
+}
+
+.footer-nav a {
+  text-decoration: none;
+  color: var(--text-muted);
+}
+
+.footer-nav a:hover {
+  color: var(--text);
+  opacity: 1;
+}
+
+.footer-copy {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+@media (max-width: 640px) {
+  .header-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hero {
+    padding-top: 3rem;
+  }
+
+  .about-lead::first-letter {
+    font-size: 3rem;
+  }
+}
